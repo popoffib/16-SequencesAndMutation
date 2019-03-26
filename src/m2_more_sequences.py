@@ -185,9 +185,15 @@ def index_of_largest_number(numbers, n):
 
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    biggest_number = 0
+
+    for k in range(n):
+        if numbers[k] > numbers[biggest_number]:
+            biggest_number = k
+    return biggest_number
 
 
 # ----------------------------------------------------------------------
@@ -240,9 +246,15 @@ def number_of_stutters(s):
        :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    count = 0
+
+    for k in range(len(s) - 1):
+        if s[k+1] == s[k]:
+            count = count + 1
+    return count
 
 
 def run_test_is_palindrome():
