@@ -325,7 +325,7 @@ def is_palindrome(s):
       :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -334,6 +334,12 @@ def is_palindrome(s):
     #   above are particularly good examples to work by hand.
     ####################################################################
     # ------------------------------------------------------------------
+    backwards = ''
+    for k in range(len(s) - 1, -1, -1):
+        backwards = backwards + s[k]
+        if s == backwards:
+            return True
+    return False
 
 
 # ----------------------------------------------------------------------
@@ -392,9 +398,14 @@ def count_same(sequence1, sequence2):
       type: sequence2: tuple or list or string
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    total = 0
+    for k in range(len(sequence2)):
+        if sequence2[k] == sequence1[k]:
+            total = total + 1
+    return total
 
 
 # ----------------------------------------------------------------------
